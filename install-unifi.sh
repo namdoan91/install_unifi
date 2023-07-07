@@ -167,7 +167,7 @@ AddPkg snappy
 AddPkg cyrus-sasl
 AddPkg icu
 AddPkg boost-libs
-AddPkg mongodb42
+AddPkg mongodb44
 AddPkg unzip
 AddPkg pcre
 
