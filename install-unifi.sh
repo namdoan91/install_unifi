@@ -12,7 +12,7 @@ RC_SCRIPT_URL="https://raw.githubusercontent.com/gozoinks/unifi-pfsense/master/r
 # If pkg-ng is not yet installed, bootstrap it:
 if ! /usr/sbin/pkg -N 2> /dev/null; then
   echo "FreeBSD pkgng not installed. Installing..."
-  env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg bootstrap
+  env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg bootstrap -f
   echo " done."
 fi
 
