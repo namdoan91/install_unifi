@@ -10,20 +10,20 @@ UNIFI_SOFTWARE_URL="https://dl.ui.com/unifi/7.2.97/UniFi.unix.zip"
 RC_SCRIPT_URL="https://raw.githubusercontent.com/gozoinks/unifi-pfsense/master/rc.d/unifi.sh"
 
 # If pkg-ng is not yet installed, bootstrap it:
-if ! /usr/sbin/pkg -N 2> /dev/null; then
+if ! /usr/local/sbin/pkg -N 2> /dev/null; then
   echo "FreeBSD pkgng not installed. Installing..."
-  env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg bootstrap
+  env ASSUME_ALWAYS_YES=YES /usr/local/sbin/pkg bootstrap
   echo " done."
 fi
 
 # If installation failed, exit:
-if ! /usr/sbin/pkg -N 2> /dev/null; then
+if ! /usr/local/sbin/pkg -N 2> /dev/null; then
   echo "ERROR: pkgng installation failed. Exiting."
   exit 1
 fi
 
 # Determine this installation's Application Binary Interface
-ABI=`/usr/sbin/pkg config abi`
+ABI=`/usr/local/sbin/pkg config abi`
 
 # FreeBSD package source:
 FREEBSD_PACKAGE_URL="https://pkg.freebsd.org/${ABI}/latest/All/"
