@@ -119,7 +119,7 @@ AddPkg () {
     env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg add -f "$pkgurl" || exit 1
 
     # if update openjdk8 then force detele snappyjava to reinstall for new version of openjdk
-    if [ "$pkgname" == "openjdk9" ]; then
+    if [ "$pkgname" == "openjdk8" ]; then
       pkg unlock -yq snappyjava
       env ASSUME_ALWAYS_YES=YES /usr/sbin/pkg delete snappyjava
     fi
@@ -155,7 +155,7 @@ AddPkg libXrender
 AddPkg libinotify
 AddPkg javavmwrapper
 AddPkg java-zoneinfo
-AddPkg openjdk9
+AddPkg openjdk10
 AddPkg snappyjava
 AddPkg snappy
 AddPkg cyrus-sasl
