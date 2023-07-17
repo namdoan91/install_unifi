@@ -134,7 +134,7 @@ AddPkg freetype2
 AddPkg fontconfig
 AddPkg alsa-lib
 AddPkg mpdecimal
-AddPkg python311
+AddPkg python38
 AddPkg libfontenc
 AddPkg mkfontscale
 AddPkg dejavu
