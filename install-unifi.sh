@@ -155,7 +155,7 @@ AddPkg libXrender
 AddPkg libinotify
 AddPkg javavmwrapper
 AddPkg java-zoneinfo
-AddPkg openjdk11
+AddPkg openjdk12
 AddPkg snappyjava
 AddPkg snappy
 AddPkg cyrus-sasl
